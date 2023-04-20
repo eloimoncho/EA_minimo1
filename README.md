@@ -6,6 +6,8 @@
 
 ### Instalación 🔧
 
+Ejercicio tipo 3
+
 ¿Qué está hecho?
 
 * _Texo._

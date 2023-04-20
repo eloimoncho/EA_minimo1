@@ -40,10 +40,21 @@ export class UserCreateComponent implements OnInit {
 
   onSubmit(): void {
     if (this.userForm.invalid) {
-      this.router.navigate(['/list-user']);
-      alert('faltan datos');
+      return;
     }
     this.openModal();
+  
+    const userData = this.userForm.value;
+    this.userService.addUser(userData).subscribe(
+      (response) => {
+        console.log('Usuario guardado correctamente:', response);
+        // Aquí podrías redirigir a la página de éxito, por ejemplo
+      },
+      (error) => {
+        console.error('Error al guardar usuario:', error);
+        // Aquí podrías mostrar un mensaje de error al usuario
+      }
+    );
   
   }
   confirmChanges(): void {

@@ -35,6 +35,10 @@ import { ActivityComponent } from './components/activity-components/activity/act
 import { ActivityCreateComponent } from './components/activity-components/activity-create/activity-create.component';
 import { ActivityEditComponent } from './components/activity-components/activity-edit/activity-edit.component';
 import { ActivityDetailsComponent } from './components/activity-components/activity-details/activity-details.component';
+import { FriendManagerComponent } from './components/friend-manager-components/friend-manager/friend-manager.component';
+import { FriendManagerCreateComponent } from './components/friend-manager-components/friend-manager-create/friend-manager-create.component';
+import { FriendManagerDetailsComponent } from './components/friend-manager-components/friend-manager-details/friend-manager-details.component';
+import { FriendManagerEditComponent } from './components/friend-manager-components/friend-manager-edit/friend-manager-edit.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -66,7 +70,12 @@ const routes: Routes = [
   { path:'activity',component: ActivityComponent },
   { path:'activity-create',component: ActivityCreateComponent },
   { path:'activity-details/:id',component: ActivityDetailsComponent },
-  { path:'activity-edit/:id',component: ActivityEditComponent }
+  { path:'activity-edit/:id',component: ActivityEditComponent },
+  
+  { path:'friend-manager',component: FriendManagerComponent },
+  { path:'friend-manager-create',component: FriendManagerCreateComponent },
+  { path:'friend-manager-details/:id',component: FriendManagerDetailsComponent },
+  { path:'friend-manager-edit/:id',component: FriendManagerEditComponent }
 
 
 
@@ -106,6 +115,11 @@ const routes: Routes = [
     ActivityCreateComponent,
     ActivityEditComponent,
     ActivityDetailsComponent,
+
+    FriendManagerComponent,
+    FriendManagerCreateComponent,
+    FriendManagerDetailsComponent,
+    FriendManagerEditComponent,
   ],
   imports: [
     BrowserModule,

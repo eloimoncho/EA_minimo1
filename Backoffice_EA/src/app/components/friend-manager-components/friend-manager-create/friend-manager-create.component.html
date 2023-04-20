@@ -1,0 +1,64 @@
+<confirmation-modal
+  [isOpen]="isModalOpen"
+  (acceptChanges)="onAcceptChanges()"
+  (cancelChanges)="onCancelChanges()"
+></confirmation-modal>
+
+
+<h2 class="text-center">Crear friendManager</h2>
+
+<form [formGroup]="friendManagerForm" (ngSubmit)="onSubmit()" class="row g-3">
+  <div class="form-group">
+    <label for="idCreator">ID Creador:</label>
+    <input
+      type="string"
+      id="idCreator"
+      formControlName="idCreator"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="restrictPublications">Restringir publicaciones:</label>
+    <input
+      type="string"
+      id="restrictPublications"
+      formControlName="restrictPublications"
+      class="form-control"
+    />
+  </div>
+  
+  <div class="form-group">
+    <label for="restrictActivities">Restringir actividades:</label>
+    <input
+      type="string"
+      id="restrictActivities"
+      formControlName="restrictActivities"
+      class="form-control"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="title">Título</label>
+    <input
+      type="string"
+      id="title"
+      formControlName="title"
+      class="form-control"
+    />
+  </div> 
+
+  <div class="form-group form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="blockRestricted"
+      name="blockRestricted"
+    />
+    <label class="form-check-label" for="blockRestricted">Bloquear</label>
+  </div>
+
+
+  <button class="btn btn-primary" type="submit">Guardar cambios</button>
+
+
